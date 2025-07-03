@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">picard.replit.dev</domain>
+        <domain includeSubdomains="true">36a00fdd-b558-4b85-acec-5ac02d33f0fc-00-1mkusf0mqzlrp.picard.replit.dev</domain>
+    </domain-config>
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system"/>
+        </trust-anchors>
+    </base-config>
+</network-security-config>

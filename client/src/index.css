@@ -1,0 +1,187 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 210 11% 98%; /* #F5F7FA */
+  --foreground: 220 14% 8%; /* #1F2937 */
+  --muted: 210 11% 96%; /* #F1F5F9 */
+  --muted-foreground: 220 9% 46%; /* #64748B */
+  --popover: 210 11% 98%; /* #F5F7FA */
+  --popover-foreground: 220 14% 8%; /* #1F2937 */
+  --card: 0 0% 100%; /* #FFFFFF */
+  --card-foreground: 220 14% 8%; /* #1F2937 */
+  --border: 220 10% 89%; /* #E2E8F0 */
+  --input: 220 10% 89%; /* #E2E8F0 */
+  --primary: 218 100% 65%; /* #3B82F6 */
+  --primary-foreground: 0 0% 100%; /* #FFFFFF */
+  --secondary: 210 11% 96%; /* #F1F5F9 */
+  --secondary-foreground: 220 14% 8%; /* #1F2937 */
+  --accent: 210 11% 96%; /* #F1F5F9 */
+  --accent-foreground: 220 14% 8%; /* #1F2937 */
+  --destructive: 0 84% 60%; /* #EF4444 */
+  --destructive-foreground: 0 0% 100%; /* #FFFFFF */
+  --ring: 218 100% 65%; /* #3B82F6 */
+  --radius: 0.5rem;
+
+  /* AI Social Media Generator Brand Colors */
+  --ai-primary: 258 90% 66%; /* #6366F1 - Electric Indigo */
+  --ai-secondary: 25 95% 53%; /* #FF6B35 - Vibrant Orange */
+  --ai-accent: 160 84% 39%; /* #10B981 - Emerald Green */
+  --ai-gradient: linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #EC4899 100%);
+  --ai-text-gradient: linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #EC4899 100%);
+  
+  /* Platform colors */
+  --tiktok: 0 0% 0%; /* #000000 */
+  --tiktok-pink: 346 100% 66%; /* #FF0050 */
+  --instagram: 340 82% 52%; /* #E4405F */
+  --instagram-purple: 264 68% 52%; /* #833AB4 */
+  --facebook: 221 83% 53%; /* #1877F2 */
+  --snapchat: 59 100% 50%; /* #FFFC00 */
+  --youtube: 0 100% 50%; /* #FF0000 */
+  --twitter: 203 89% 53%; /* #1DA1F2 */
+}
+
+.dark {
+  --background: 220 14% 4%; /* #0F172A */
+  --foreground: 210 11% 96%; /* #F1F5F9 */
+  --muted: 220 14% 8%; /* #1E293B */
+  --muted-foreground: 220 9% 64%; /* #94A3B8 */
+  --popover: 220 14% 4%; /* #0F172A */
+  --popover-foreground: 210 11% 96%; /* #F1F5F9 */
+  --card: 220 14% 6%; /* #1E293B */
+  --card-foreground: 210 11% 96%; /* #F1F5F9 */
+  --border: 220 14% 15%; /* #334155 */
+  --input: 220 14% 15%; /* #334155 */
+  --primary: 218 100% 65%; /* #3B82F6 */
+  --primary-foreground: 0 0% 100%; /* #FFFFFF */
+  --secondary: 220 14% 8%; /* #1E293B */
+  --secondary-foreground: 210 11% 96%; /* #F1F5F9 */
+  --accent: 220 14% 8%; /* #1E293B */
+  --accent-foreground: 210 11% 96%; /* #F1F5F9 */
+  --destructive: 0 63% 31%; /* #991B1B */
+  --destructive-foreground: 210 11% 96%; /* #F1F5F9 */
+  --ring: 218 100% 65%; /* #3B82F6 */
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+  }
+
+  .line-clamp-2 {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+}
+
+@layer components {
+  /* Brand Gradients */
+  .gradient-ai {
+    background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #EC4899 100%);
+  }
+  
+  .gradient-ai-secondary {
+    background: linear-gradient(135deg, #FF6B35 0%, #F59E0B 100%);
+  }
+  
+  .gradient-ai-accent {
+    background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  }
+  
+  /* Text Gradients */
+  .text-gradient-ai {
+    background: linear-gradient(135deg, #6366F1 0%, #8B5CF6 50%, #EC4899 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Platform Gradients */
+  .gradient-tiktok {
+    background: linear-gradient(135deg, hsl(var(--tiktok)), hsl(var(--tiktok-pink)));
+  }
+  
+  .gradient-instagram {
+    background: linear-gradient(135deg, hsl(var(--instagram)), hsl(var(--instagram-purple)));
+  }
+  
+  /* Brand Shadows */
+  .shadow-ai {
+    box-shadow: 0 10px 25px -3px rgba(99, 102, 241, 0.1), 0 4px 6px -2px rgba(99, 102, 241, 0.05);
+  }
+  
+  .shadow-ai-lg {
+    box-shadow: 0 20px 40px -4px rgba(99, 102, 241, 0.15), 0 8px 16px -4px rgba(99, 102, 241, 0.1);
+  }
+  
+  /* Glass Morphism Effect */
+  .glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+  
+  .glass-dark {
+    background: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Mobile-first button styles */
+  .btn-ai-primary {
+    @apply bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200;
+  }
+  
+  .btn-ai-secondary {
+    @apply bg-gradient-to-r from-orange-500 to-amber-500 text-white font-semibold py-3 px-6 rounded-xl shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: hsl(var(--muted));
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--border));
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--muted-foreground));
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 1024px) {
+  body {
+    padding-bottom: 80px;
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "name": "ai-social-generator-mobile",
+  "version": "1.0.0",
+  "description": "AI Social Media Generator Mobile App Configuration",
+  "scripts": {
+    "build:mobile": "npm run build && npx cap sync",
+    "ios": "npx cap open ios",
+    "android": "npx cap open android", 
+    "sync": "npx cap sync",
+    "setup": "npm install @capacitor/cli @capacitor/core @capacitor/ios @capacitor/android @capacitor/splash-screen @capacitor/status-bar"
+  },
+  "devDependencies": {
+    "@capacitor/cli": "^5.0.0"
+  },
+  "dependencies": {
+    "@capacitor/core": "^5.0.0",
+    "@capacitor/ios": "^5.0.0", 
+    "@capacitor/android": "^5.0.0",
+    "@capacitor/splash-screen": "^5.0.0",
+    "@capacitor/status-bar": "^5.0.0"
+  },
+  "capacitor": {
+    "appId": "com.aisocial.generator",
+    "appName": "AI Social Media Generator",
+    "webDir": "dist",
+    "platforms": ["ios", "android"]
+  }
+}

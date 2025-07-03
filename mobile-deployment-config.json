@@ -1,0 +1,75 @@
+{
+  "app": {
+    "name": "AI Social Media Generator",
+    "shortName": "AI SMG",
+    "description": "AI-powered social media content generation platform for viral growth across TikTok, Instagram, YouTube, and more",
+    "version": "1.0.0",
+    "buildNumber": "1"
+  },
+  "platforms": {
+    "ios": {
+      "bundleIdentifier": "com.aisocialmediagenerator.app",
+      "displayName": "AI Social Media Generator",
+      "category": "Social Networking",
+      "minimumOSVersion": "13.0",
+      "devices": ["iPhone", "iPad"],
+      "capabilities": [
+        "camera",
+        "photo-library",
+        "network",
+        "background-app-refresh"
+      ]
+    },
+    "android": {
+      "packageName": "com.aisocialmediagenerator.app",
+      "targetSdkVersion": 34,
+      "minSdkVersion": 24,
+      "permissions": [
+        "INTERNET",
+        "CAMERA",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "RECORD_AUDIO"
+      ]
+    }
+  },
+  "features": {
+    "offlineMode": true,
+    "pushNotifications": true,
+    "biometricAuth": true,
+    "socialSharing": true,
+    "fileUpload": true
+  },
+  "deployment": {
+    "webUrl": "https://your-app.replit.app",
+    "apiBaseUrl": "https://your-app.replit.app/api",
+    "supportedLanguages": [
+      "en", "es", "fr", "de", "it", "pt", "ru", "zh", "ja", "ko",
+      "ar", "hi", "th", "vi", "tr", "pl", "nl", "sv", "da", "no"
+    ]
+  },
+  "appStore": {
+    "category": "Social Networking",
+    "keywords": [
+      "social media",
+      "content creation",
+      "AI",
+      "viral",
+      "TikTok",
+      "Instagram",
+      "YouTube",
+      "marketing",
+      "automation"
+    ],
+    "privacy": {
+      "dataCollection": {
+        "analytics": true,
+        "crashReporting": true,
+        "userContent": true,
+        "accountInfo": true
+      },
+      "dataSharing": false,
+      "encryption": true
+    }
+  }
+}
