@@ -24,6 +24,7 @@ export default defineConfig({
     },
   },
   root: path.resolve(import.meta.dirname, "client"),
+  base: "./", // Ensure assets are linked relatively for file:/// protocol
   build: {
     outDir: "../dist/public", // Correctly relative to the 'root' option
     emptyOutDir: true,
